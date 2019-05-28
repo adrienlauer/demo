@@ -1,10 +1,12 @@
-name: ekara-demo-al3
-qualifier: dev
+name: ekara-demo-al
+qualifier: light
 
 ekara:
   distribution:
     repository: ekara-platform/distribution
   components:
+    ek-aws:
+      repository: adrienlauer/aws-provider
     visualizer:
       repository: ekara-platform/swarm-visualizer-stack
 
@@ -25,12 +27,6 @@ nodes:
                 cidr_ip: 0.0.0.0/0
                 rule_desc: allow all on port {{ .app.visualizer.port }} for the swarm visualizer 
     volumes:
-      - path: /data1
-        params:
-          device_name: xvdf
-          volume_type: gp2
-          volume_size: 9
-          delete_on_termination: true
       - path: /var/lib/docker
         params:
           device_name: xvdg
@@ -41,9 +37,7 @@ nodes:
             Type: Docker
             TestTagKey: TestTagValue
   nodeset1:
-    instances: 3
-  nodeset2:
-    instances: 4
+    instances: 1
 
 stacks:
   visualizer:
