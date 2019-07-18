@@ -19,19 +19,17 @@ nodes:
     provider:
       name: ek-aws
       params:
-        securityGroups:        
-          vpc_id: "vpc-880aeaef"
-          groups:
-            - name: app
-              rules:
-                - proto: tcp
-                  ports:
-                    - {{ .Vars.app.visualizer.port }} 
-                  cidr_ip: 0.0.0.0/0
-                  rule_desc: allow all on port {{ .Vars.app.visualizer.port }} for the swarm visualizer 
+        securityGroups:
+          app:
+            vpc_id: "vpc-880aeaef"
+            rules:
+              - proto: tcp
+                ports:
+                  - {{ .Vars.app.visualizer.port }} 
+                cidr_ip: 0.0.0.0/0
+                rule_desc: allow all on port {{ .Vars.app.visualizer.port }} for the swarm visualizer 
         instances:
             instance_type: "t2.micro"
-            image: "ami-f90a4880"
         volumes:
           /var/lib/docker:
             device_name: xvdf
