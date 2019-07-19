@@ -19,8 +19,6 @@ nodes:
     provider:
       name: ek-aws
       params:
-        placementGroup:
-          strategy: cluster
         securityGroups:
           app:
             vpc_id: "vpc-880aeaef"
