@@ -2,7 +2,7 @@ name: ekara-demo-al
 qualifier: light
 
 ekara:
-  distribution:
+  parent:
     repository: ekara-platform/distribution
   components:
     ek-aws:
