@@ -32,8 +32,6 @@ nodes:
             instance_type: "t2.micro"
         volumes:
           /var/lib/docker:
-            device_name: xvdf
-            volume_type: standard
             volume_size: 1
             delete_on_termination: true
 
