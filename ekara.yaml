@@ -31,9 +31,13 @@ nodes:
         instances:
             instance_type: "t2.micro"
         volumes:
-          /var/lib/docker:
-            volume_size: 1
-            delete_on_termination: true
+          docker:
+            ebs:
+              volume_size: 1
+              delete_on_termination: true
+            fs:
+              type: ext4
+              path: /var/lib/docker
 
   nodeset1:
     labels:
