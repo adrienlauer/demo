@@ -5,9 +5,6 @@ ekara:
   parent:
     repository: ekara-platform/distribution
   components:
-    ek-aws:
-      repository: adrienlauer/aws-provider
-      ref: volumes
     ek-swarm:
       repository: adrienlauer/swarm-orchestrator
       ref: no-volumes-ansible
