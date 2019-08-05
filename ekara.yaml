@@ -21,7 +21,6 @@ nodes:
       params:
         securityGroups:
           app:
-            vpc_id: "vpc-880aeaef"
             rules:
               - proto: tcp
                 ports:
