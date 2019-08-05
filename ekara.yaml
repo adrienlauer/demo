@@ -36,8 +36,7 @@ nodes:
               volume_size: 1
               delete_on_termination: true
             fs:
-              ek_fs_type: ext4
-              ek_fs_mount_path: /var/lib/docker
+              mount_path: /var/lib/docker
 
   nodeset1:
     labels:
