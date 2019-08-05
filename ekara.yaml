@@ -34,6 +34,7 @@ nodes:
             ebs:
               volume_size: 1
               delete_on_termination: true
+              device_name: /dev/xvdf
             fs:
               mount_path: /var/lib/docker
 
