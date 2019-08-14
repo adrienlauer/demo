@@ -5,9 +5,6 @@ ekara:
   parent:
     repository: ekara-platform/distribution
   components:
-    ek-swarm:
-      repository: adrienlauer/swarm-orchestrator
-      ref: no-volumes-ansible
     visualizer:
       repository: ekara-platform/swarm-visualizer-stack
 
